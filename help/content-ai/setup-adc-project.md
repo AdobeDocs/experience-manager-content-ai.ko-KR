@@ -47,7 +47,7 @@ AEM Content AI Services는 두 가지 인증 방법을 지원합니다. 통합�
 
    >[!NOTE]
    >
-   >API 카드가 &quot;라이선스 필요&quot; 메시지와 함께 비활성화되면 AEM as a Cloud Service 환경이 현대화되지 않을 수 있습니다. [AEM as a Cloud Service 환경 현대화](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment)를 참조하십시오.
+   >API 카드가 &quot;라이선스 필요&quot; 메시지와 함께 비활성화되면 AEM as a Cloud Service 환경이 현대화되지 않을 수 있습니다. [AEM as a Cloud Service 환경 현대화](https://experienceleague.adobe.com/ko/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment)를 참조하십시오.
 
 1. **[!UICONTROL API 구성]** 대화 상자에서 **[!UICONTROL 서버 간]** 인증을 선택합니다.
 

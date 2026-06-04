@@ -23,7 +23,7 @@ ht-degree: 1%
 시작하기 전에 다음 조건이 충족되는지 확인하십시오.
 
 * 하나 이상의 AEM as a Cloud Service 환경이 있는 활성 Cloud Manager 프로그램이 있습니다.
-* 프로그램의 Admin Console에서 **[시스템 관리자](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** 역할을 가지고 있습니다.
+* 프로그램의 Admin Console에서 **[시스템 관리자](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** 역할을 가지고 있습니다.
 * **Adobe Admin Console**&#x200B;에서 환경 제품 프로필이 프로비저닝되었습니다. [Adobe Developer Console 프로젝트 설정](setup-adc-project.md)을 참조하세요.
 
 ## 1단계 - 콘텐츠 AI 구성 탭 열기 {#open-tab}
