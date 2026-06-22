@@ -7,9 +7,9 @@ level: Beginner
 solution: Experience Manager
 keywords: AEM 콘텐츠 AI, 개요, 콘텐츠 소스, 시맨틱 검색, 획득, Cloud Manager
 source-git-commit: 9b3c63be1aa95339086ee5994cd4dd7cdfa7e746
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '713'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
