@@ -7,7 +7,7 @@ level: Beginner
 solution: Experience Manager
 keywords: AEM 콘텐츠 AI, Adobe Developer Console, 인증, 서버 간, API 키, 액세스 토큰
 source-git-commit: 445aeafe64eb8a68d0770c1f1afb54d68e0b054f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '674'
 ht-degree: 100%
 
