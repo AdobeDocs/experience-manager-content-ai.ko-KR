@@ -6,10 +6,10 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM 콘텐츠 AI, 콘텐츠 AI 소스, 획득, Cloud Manager, Adobe Developer Console
-source-git-commit: 86c0b8b910583701dc4bd42b61e082cc5429cee8
-workflow-type: ht
-source-wordcount: '928'
-ht-degree: 100%
+source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
+workflow-type: tm+mt
+source-wordcount: '1225'
+ht-degree: 72%
 
 ---
 
@@ -23,8 +23,42 @@ ht-degree: 100%
 시작하기 전에 다음 조건이 충족되는지 확인하십시오.
 
 * 하나 이상의 AEM as a Cloud Service 환경이 있는 활성 Cloud Manager 프로그램을 갖고 있습니다.
-* 프로그램의 Admin Console에서 **[시스템 관리자](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** 역할을 갖고 있습니다.
-* **Adobe Admin Console**&#x200B;에서 환경 제품 프로필이 프로비저닝되었습니다. [Adobe Developer Console 프로젝트 설정](setup-adc-project.md)을 참조하십시오.
+* 사용자가 대상 환경의 **AEM 사용자** 제품 프로필에 할당되어 콘텐츠 소스를 볼 수 있습니다.
+* 사용자가 대상 환경의 **AEM 관리자** 제품 프로필에 할당되어 콘텐츠 소스를 만들고 편집할 수 있습니다. Cloud Manager에 대한 액세스만으로는 충분하지 않습니다. 아래 [AEM 제품 프로필에 사용자 할당](#assign-product-profile)을 참조하세요.
+* **Adobe Admin Console**&#x200B;에서 환경 제품 프로필이 프로비저닝되었습니다.
+
+## AEM 제품 프로필에 사용자 할당 {#assign-product-profile}
+
+이 절차를 사용하여 특정 환경에 대한 [!DNL Adobe Experience Manager] as a Cloud Service에 대한 액세스 권한을 사용자에게 부여합니다. 사용자에게 필요한 액세스와 일치하는 프로필을 할당합니다.
+
+* **[!UICONTROL AEM 사용자]** - 콘텐츠 원본을 봅니다.
+* **[!UICONTROL AEM 관리자]** - 콘텐츠 소스를 만들고 편집합니다.
+
+>[!NOTE]
+>
+>AEM에 액세스하려면 사용자가 **[!UICONTROL AEM 사용자]** 또는 **[!UICONTROL AEM 관리자]**&#x200B;와(과) 같은 AEM 제품 프로필에 속해야 합니다. Cloud Manager에 대한 액세스 만으로는 충분하지 않습니다.
+
+이러한 프로필을 할당하려면 [!UICONTROL 비즈니스 소유자] Cloud Manager 제품 프로필이 있는 시스템 관리자여야 합니다. 사용자 이름과 이메일 주소를 준비합니다.
+
+1. [Cloud Manager](https://my.cloudmanager.adobe.com/)에서 프로그램으로 이동하여 대상 환경에 대해 **[!UICONTROL 액세스 관리]**&#x200B;를 선택합니다. 해당 환경에 대해 새 탭이 [!DNL Adobe Admin Console]을(를) 엽니다.
+1. **게시** 계층에 대한 **[!UICONTROL AEM 사용자]** 또는 **[!UICONTROL AEM 관리자]** 제품 프로필을 선택합니다(예: `AEM Administrators - publish - Program 12345 - Environment 67890`). 콘텐츠 AI는 게시된 콘텐츠를 인덱싱하므로 작성자가 아닌 게시 수준에서 프로필을 할당해야 합니다.
+1. **[!UICONTROL 사용자 추가]**&#x200B;를 선택합니다.
+1. 사용자 이름과 이메일 주소를 입력한 다음 변경 사항을 저장합니다. 사용자가 제품 프로필에 추가됩니다.
+
+개발, 스테이징 또는 프로덕션과 같이 사용자가 액세스해야 하는 각 환경에 대해 이 단계를 반복합니다.
+
+>[!CAUTION]
+>
+>이름이 **[!UICONTROL AEM 관리자]** 또는 **[!UICONTROL AEM 사용자]**&#x200B;인 기본 제품 프로필을 편집하거나 삭제하지 마십시오. **[!UICONTROL AEM 관리자]**&#x200B;의 이름을 바꾸면 할당된 모든 사용자의 관리자 권한이 제거됩니다.
+
+### 할당 확인 {#verify-assignment}
+
+할당이 성공했는지 확인하려면:
+
+1. [!DNL Admin Console]에서 할당한 제품 프로필을 다시 엽니다.
+1. 사용자가 구성원 목록에 표시되는지 확인합니다.
+
+액세스 또는 토큰 문제를 해결하는 경우 그룹을 통해서가 아니라 사용자가 제품 프로필에 직접 추가되었는지 확인하십시오.
 
 ## 1단계 - 콘텐츠 AI 구성 탭 열기 {#open-tab}
 

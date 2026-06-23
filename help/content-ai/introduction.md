@@ -6,10 +6,10 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM 콘텐츠 AI, 개요, 콘텐츠 소스, 시맨틱 검색, 획득, Cloud Manager
-source-git-commit: 9b3c63be1aa95339086ee5994cd4dd7cdfa7e746
-workflow-type: ht
-source-wordcount: '713'
-ht-degree: 100%
+source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
+workflow-type: tm+mt
+source-wordcount: '716'
+ht-degree: 97%
 
 ---
 
@@ -67,7 +67,7 @@ AEM 콘텐츠 AI는 토대에 있는 신뢰할 수 있는 콘텐츠부터 최상
 
 ### &#x200B;2. 콘텐츠 AI 소스 제어 {#control}
 
-콘텐츠 AI 소스를 설정 및 관리하여 AI 기반 환경을 사용하도록 설정합니다. [콘텐츠 소스 제어](contentsources.md)를 참조하십시오.
+콘텐츠 AI 소스를 설정 및 관리하여 AI 기반 환경을 활성화하십시오. 자세한 내용은 [콘텐츠 소스 제어](contentsources.md)를 참조하십시오.
 
 ## 콘텐츠 AI API 알아보기  {#apis}
 
