@@ -6,10 +6,10 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM 콘텐츠 AI, 콘텐츠 AI 소스, 획득, Cloud Manager, Adobe Developer Console
-source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
+source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
 workflow-type: tm+mt
-source-wordcount: '1225'
-ht-degree: 72%
+source-wordcount: '1276'
+ht-degree: 61%
 
 ---
 
@@ -96,11 +96,13 @@ ht-degree: 72%
 
    ![사용 가능한 옵션이 표시되는 새로 고침 빈도 드롭다운](../assets/content-ai-onboarding-step-5-1.png)
 
-1. **[!UICONTROL 소스 만들기]**&#x200B;를 선택합니다.
+1. **[!UICONTROL 소스 만들기]**&#x200B;를 선택합니다. 획득이 자동으로 시작되고 원본이 **인덱싱**(으)로 이동합니다.
 
-## 3단계 - 획득 트리거 {#trigger-acquisition}
+   ![인덱싱 상태에서 새로 만든 원본을 표시하는 콘텐츠 원본 목록](../assets/content-ai-onboarding-step-6.png)
 
-소스가 만들어진 후의 상태는 **신규**&#x200B;입니다. 초기 획득을 실행하여 색인화를 시작합니다.
+## 3단계 - 획득 재실행 {#trigger-acquisition}
+
+소스를 만든 다음 **[!UICONTROL 새로 고침 빈도]**&#x200B;로 설정된 일정에 따라 획득 작업이 자동으로 실행됩니다. 언제든지 수동으로 실행을 트리거할 수도 있습니다. 예를 들어 새 콘텐츠를 게시한 후 즉시 다시 색인화하도록 할 수 있습니다.
 
 1. 소스 목록에서 소스 옆에 있는 **추가 작업**(...) 아이콘을 선택한 다음 **[!UICONTROL 획득 트리거]**&#x200B;를 선택합니다.
 
@@ -116,7 +118,7 @@ ht-degree: 72%
 
 | 상태 | 의미 |
 | --- | --- |
-| **신규** | 소스가 만들어졌으나 획득이 아직 실행되지 않았습니다. |
+| **신규** | Source이 방금 생성되었습니다. 자동 획득이 아직 시작되지 않았습니다. 이 상태는 간단합니다. |
 | **색인화** | 획득이 진행 중이며, 콘텐츠가 크롤 및 색인화되고 있습니다. |
 | **사용 가능** | 색인화가 완료되었습니다. 소스에서 검색 쿼리를 수행할 준비가 되었습니다. |
 
@@ -130,15 +132,17 @@ ht-degree: 72%
 
 소스 상태가 **사용 가능**&#x200B;이면 Cloud Manager에서 직접 검색 쿼리를 실행하여 콘텐츠가 올바르게 색인화되었는지 확인할 수 있습니다.
 
-1. 소스 목록에서 소스 옆에 있는 **[!UICONTROL 검색]**&#x200B;을 선택합니다.
+1. 소스 목록에서 소스 옆에 있는 **검색**(돋보기) 아이콘을 선택합니다.
 
-   ![사용 가능한 소스에서 검색 버튼이 강조 표시된 콘텐츠 소스 목록](../assets/content-ai-onboarding-step-13.png)
+   사용 가능한 원본에서 검색 아이콘이 강조 표시된 ![콘텐츠 원본 목록](../assets/content-ai-onboarding-step-13.png)
 
 1. 검색 필드에 쿼리를 입력합니다. 일치 점수 및 콘텐츠 유형이 포함된 일치 항목의 목록이 표시됩니다(예: **PAGE** 또는 **PDF**). 결과를 선택하면 오른쪽에 미리보기가 열립니다.
 
    ![쿼리, 일치 점수를 포함한 일치하는 결과, 최상위 결과에 대한 미리보기 창이 나타난 검색 패널](../assets/content-ai-onboarding-step-14.png)
 
 ## 소스 수정 또는 삭제 {#modify-source}
+
+### 소스 수정 {#modify}
 
 소스 구성을 만든 후 업데이트하려면 다음을 수행하십시오.
 
@@ -148,15 +152,19 @@ ht-degree: 72%
 
 1. **[!UICONTROL 콘텐츠 AI 소스 수정]** 대화 상자에서 필요에 따라 **[!UICONTROL 설명]**, **[!UICONTROL 웹 사이트 주소]**, **[!UICONTROL URL 제외]** 또는 **[!UICONTROL 새로 고침 빈도]**&#x200B;를 업데이트합니다. **[!UICONTROL 콘텐츠 AI 구성 이름]**&#x200B;은 읽기 전용이므로 변경할 수 없습니다.
 
-1. **[!UICONTROL 저장]**&#x200B;을 선택하여 변경 내용을 적용하거나 대화 상자의 왼쪽 하단에서 **[!UICONTROL 삭제]**&#x200B;를 선택하여 소스를 완전히 제거하십시오.
+   ![편집 가능한 필드가 강조 표시된 콘텐츠 AI Source 수정 대화 상자](../assets/content-ai-onboarding-step-12.png)
+
+1. 변경 내용을 적용하려면 **[!UICONTROL 저장]**&#x200B;을 선택하세요. 소스 목록이 업데이트되어 변경 사항이 반영됩니다.
+
+### 소스 삭제 {#delete}
+
+1. 소스 목록에서 소스 옆에 있는 **추가 작업**(...) 아이콘을 선택한 다음 **[!UICONTROL 삭제]**&#x200B;를 선택합니다.
 
    >[!WARNING]
    >
    >소스 삭제는 되돌릴 수 없습니다. 해당 소스에 대해 색인화된 모든 콘텐츠가 제거되어 더 이상 검색 쿼리를 수행할 수 없습니다.
 
-   편집 가능한 필드가 강조 표시되고 왼쪽 하단에 삭제 버튼이 있는 ![콘텐츠 AI 소스 수정 대화 상자](../assets/content-ai-onboarding-step-12.png)
-
-소스 목록이 업데이트되어 변경 사항이 반영됩니다. 소스를 삭제하면 더 이상 목록에 나타나지 않습니다.
+삭제 후에는 소스가 더 이상 목록에 표시되지 않습니다.
 
 ## 다음 단계 {#next-steps}
 
