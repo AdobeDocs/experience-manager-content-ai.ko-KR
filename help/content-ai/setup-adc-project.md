@@ -7,9 +7,9 @@ level: Beginner
 solution: Experience Manager
 keywords: AEM 콘텐츠 AI, Adobe Developer Console, 인증, 서버 간, API 키, 액세스 토큰
 source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '714'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ AEM 콘텐츠 AI 서비스 API를 호출하려면 Adobe Developer Console(ADC) �
 * 조직의 [Adobe Developer Console](https://developer.adobe.com/console/)에 액세스할 권한이 있는지.
 * **Adobe Admin Console**&#x200B;의 AEM 콘텐츠 AI 서비스 제품 프로필에 **개발자**&#x200B;로 추가되어 있는지. 이 역할이 없으면 **[!UICONTROL AEM 콘텐츠 AI 서비스]** API 카드가 비활성 상태로 나타나고 **[!UICONTROL 서버 간]** 인증 옵션이 숨겨집니다.
 * 선택할 제품 프로필의 프로그램 및 환경 번호를 알고 있는지(예: `AEM User - publish - Program 12345 - Environment 67890`).
-* 프로그램의 Admin Console에서 **[시스템 관리자](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** 역할을 갖고 있습니다. 이 역할을 사용하면 제품 프로필을 관리하고 환경에 사용자를 할당할 수 있습니다.
+* 프로그램의 Admin Console에서 **[시스템 관리자](https://experienceleague.adobe.com/ko/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** 역할을 갖고 있습니다. 이 역할을 사용하여 제품 프로필을 관리하고 환경에 사용자를 할당할 수 있습니다.
 
 ## 인증 방법 선택 {#choose-auth}
 

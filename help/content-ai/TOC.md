@@ -4,7 +4,7 @@ breadcrumb-title: AEM 콘텐츠 AI
 user-guide-description: Experience Manager 콘텐츠 AI
 solution: Experience Manager
 source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '27'
 ht-degree: 100%
 
