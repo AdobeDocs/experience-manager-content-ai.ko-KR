@@ -125,7 +125,7 @@ AEM 컨텐츠 AI 검색은 방문자가 시맨틱 검색 및 생성 검색 기�
 * 하나 이상의 콘텐츠 Source이 이미 만들어졌고 **사용 가능** 상태입니다.
 * **AEM Content AI Client** OSGi 구성(`ContentAIClientImpl`)이 작성자와 게시 모두에 설정되었으며, 올바른 API 자격 증명과 기본 Content Source이 있습니다.
 
-작성자가 구성 요소를 사용할 수 있도록 설정하고, 클라이언트 라이브러리를 연결하고, 대화 상자를 구성하는 데 필요한 전체 설치 가이드는 [핵심 구성 요소 설명서](https://www.adobe.com/go/aem_cmp_library)를 참조하십시오.
+작성자가 구성 요소를 사용할 수 있도록 설정하고, 클라이언트 라이브러리를 연결하고, 대화 상자를 구성하는 데 필요한 전체 설치 가이드는 [핵심 구성 요소 설명서](https://www.adobe.com/go/aem_cmp_library_kr)를 참조하십시오.
 
 ## 축하합니다! {#congratulations}
 
@@ -137,4 +137,4 @@ AEM 컨텐츠 AI 검색은 방문자가 시맨틱 검색 및 생성 검색 기�
 
 * [Adobe Developer Console 프로젝트 설정](setup-adc-project.md) - 콘텐츠 AI API를 직접 호출하는 데 필요한 ADC 프로젝트와 자격 증명을 만듭니다.
 * [콘텐츠 AI API 참조](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) - 의미 체계, 생성 또는 하이브리드 검색 끝점을 사용하여 인덱싱된 콘텐츠를 쿼리합니다.
-* [핵심 구성 요소 설명서](https://www.adobe.com/go/aem_cmp_library) - 프록시 구성 요소 및 템플릿 정책에 대한 자세한 정보.
+* [핵심 구성 요소 설명서](https://www.adobe.com/go/aem_cmp_library_kr) - 프록시 구성 요소 및 템플릿 정책에 대한 자세한 정보.
