@@ -5,14 +5,12 @@ topic: Configuration
 role: Developer, Admin
 level: Beginner
 solution: Experience Manager
-keywords: AEM 콘텐츠 AI, 콘텐츠 AI 소스, 획득, Cloud Manager, Adobe Developer Console
-source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
-workflow-type: ht
-source-wordcount: '1276'
-ht-degree: 100%
-
+keywords: AEM 콘텐츠 AI, 콘텐츠 AI 소스, 확보, Cloud Manager, Adobe Developer Console
+source-git-commit: d8bd542a6a2d7e467b0d50e022f1e019d6f5b5ff
+workflow-type: tm+mt
+source-wordcount: '1671'
+ht-degree: 76%
 ---
-
 
 # 콘텐츠 AI 소스 설정 및 관리
 
@@ -23,9 +21,41 @@ ht-degree: 100%
 시작하기 전에 다음 조건이 충족되는지 확인하십시오.
 
 * 하나 이상의 AEM as a Cloud Service 환경이 있는 활성 Cloud Manager 프로그램을 갖고 있습니다.
+* Cloud Manager 제품 프로필이 있으며 Cloud Manager에 로그인할 수 있습니다. 아래 [Cloud Manager 액세스 권한 받기](#cloud-manager-access)를 참조하세요.
 * 사용자가 대상 환경의 **AEM 사용자** 제품 프로필에 할당되어 콘텐츠 소스를 볼 수 있습니다.
-* 사용자가 대상 환경의 **AEM 관리자** 제품 프로필에 할당되어 콘텐츠 소스를 만들고 편집할 수 있습니다. Cloud Manager에 대한 액세스만으로는 충분하지 않습니다. 아래 [AEM 제품 프로필에 사용자 할당](#assign-product-profile)을 참조하십시오.
+* 사용자가 대상 환경의 **AEM Administrators** 제품 프로필에 할당되어 콘텐츠 소스를 만들고 편집할 수 있습니다. Cloud Manager에 대한 액세스만으로는 충분하지 않습니다. 아래 [AEM 제품 프로필에 사용자 할당](#assign-product-profile)을 참조하십시오.
 * **Adobe Admin Console**&#x200B;에서 환경 제품 프로필이 프로비저닝되었습니다.
+
+## Cloud Manager 액세스 권한 얻기 {#cloud-manager-access}
+
+**[!UICONTROL 콘텐츠 AI 구성]** 탭을 열려면 Cloud Manager UI에 액세스해야 합니다. 조직의 [!DNL Adobe Admin Console] 관리자(시스템 관리자 또는 제품 관리자)가 이 액세스 권한을 부여합니다.
+
+1. [[!DNL Adobe Admin Console]](https://adminconsole.adobe.com/) 관리자에게 문의하십시오. 아직 조직의 멤버가 아닌 경우 관리자에게 Adobe ID 또는 이메일 주소를 추가하도록 요청하십시오.
+1. 조직의 AEM as a Cloud Service 프로그램에 대한 Cloud Manager 제품 프로필을 할당하도록 관리자에게 요청합니다.
+
+   | 제품 프로필 | 허용 사항 |
+   | --- | --- |
+   | **[!UICONTROL 비즈니스 소유자]** | 프로그램을 관리합니다. **[!UICONTROL 액세스 관리]**&#x200B;를 포함한 광범위한 Cloud Manager 권한이 있습니다. |
+   | **[!UICONTROL 배포 관리자]** | 환경, 배포 및 파이프라인 관리 |
+   | **[!UICONTROL 프로그램 관리자]** | 팀 설정 및 프로그램 감독을 관리합니다. |
+   | **[!UICONTROL 개발자]** | 코드 및 Git과 함께 작동합니다. 은(는) Cloud Manager 권한이 제한되어 있습니다. |
+
+1. Cloud Manager을 열려면 [Cloud Manager](https://my.cloudmanager.adobe.com/)에 로그인하거나 [[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**(으)로 이동하세요. Adobe ID이 둘 이상의 조직에 속해 있는 경우 올바른 조직을 선택하십시오.
+
+>[!NOTE]
+>
+>Cloud Manager 제품 프로필에서는 콘텐츠 소스에 대한 액세스 권한을 제공하지 않습니다. 환경에 대한 **[!UICONTROL AEM 사용자]** 또는 **[!UICONTROL AEM 관리자]** 제품 프로필이 필요합니다. [AEM 제품 프로필에 사용자 할당](#assign-product-profile)을 참조하세요. 기본 Cloud Manager 사용자 역할만 있는 사용자는 환경을 열 수 있지만 프로그램 수준 액세스 권한은 받지 않습니다.
+
+로그인했지만 프로그램 또는 **[!UICONTROL 콘텐츠 AI 구성]** 탭이 표시되지 않는 경우 관리자에게 할당된 제품 프로필을 확인하도록 요청하십시오. 또한 로그인 시 올바른 조직을 선택했는지 확인합니다. AEM Managed Services은 AEM as a Cloud Service과 다른 [!DNL Admin Console] 제품 컨텍스트 및 설정을 사용합니다.
+
+초기 온보딩 중에 프로그램을 만들려면 먼저 시스템 관리자가 **[!UICONTROL 비즈니스 소유자]** 프로필을 가지고 있어야 하며 Cloud Manager에 로그인해야 합니다.
+
+자세한 내용은 다음 문서를 참조하십시오.
+
+* [Cloud Manager 제품 프로필에 팀원 할당](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
+* [Cloud Manager 액세스](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager)
+* [AEM as a Cloud Service 팀 및 제품 프로필](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
+* [사용자 및 역할 추가](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
 
 ## AEM 제품 프로필에 사용자 할당 {#assign-product-profile}
 
@@ -36,12 +66,14 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->AEM에 액세스하려면 사용자가 **[!UICONTROL AEM 사용자]** 또는 **[!UICONTROL AEM 관리자]**&#x200B;와 같은 AEM 제품 프로필에 속해야 합니다. Cloud Manager에 대한 액세스 만으로는 충분하지 않습니다.
+>AEM에 액세스하려면 사용자가 **[!UICONTROL AEM 사용자]** 또는 **[!UICONTROL AEM 관리자]**&#x200B;와 같은 AEM 제품 프로필에 속해야 합니다. Cloud Manager에 대한 액세스만으로는 충분하지 않습니다.
 
 이러한 프로필을 할당하려면 [!UICONTROL 비즈니스 소유자] Cloud Manager 제품 프로필이 있는 시스템 관리자여야 합니다. 사용자 이름과 이메일 주소를 준비합니다.
 
 1. [Cloud Manager](https://my.cloudmanager.adobe.com/)에서 프로그램으로 이동하여 대상 환경에 대해 **[!UICONTROL 액세스 관리]**&#x200B;를 선택합니다. 새 탭이 해당 환경에 맞는 [!DNL Adobe Admin Console]을(를) 엽니다.
-1. **게시** 계층에 대한 **[!UICONTROL AEM 사용자]** 또는 **[!UICONTROL AEM 관리자]** 제품 프로필을 선택합니다(예: `AEM Administrators - publish - Program 12345 - Environment 67890`). 콘텐츠 AI는 게시된 콘텐츠를 인덱싱하므로 작성자가 아닌 게시 수준에서 프로필을 할당해야 합니다.
+1. **작성자** 및 **게시** 계층(예: `AEM Administrators - author - Program 12345 - Environment 67890` 및 `AEM Administrators - publish - Program 12345 - Environment 67890`) 모두에 대해 **[!UICONTROL AEM 사용자]** 또는 **[!UICONTROL AEM 관리자]** 제품 프로필을 선택하십시오.
+   * **[!UICONTROL AEM 사용자]** - 읽기 전용 작업입니다.
+   * **[!UICONTROL AEM 관리자]** - 콘텐츠 원본 만들기, 편집 또는 제거, 획득 트리거와 같은 쓰기 작업.
 1. **[!UICONTROL 사용자 추가를 선택합니다]**.
 1. 사용자 이름과 이메일 주소를 입력한 다음 변경 사항을 저장합니다. 사용자가 제품 프로필에 추가됩니다.
 
@@ -49,7 +81,7 @@ ht-degree: 100%
 
 >[!CAUTION]
 >
->**[!UICONTROL AEM 관리자]** 또는 **[!UICONTROL AEM 사용자]** 등의 기본 제품 프로필을 편집하거나 삭제하지 마십시오. **[!UICONTROL AEM 관리자]**&#x200B;의 이름을 변경하면 할당된 모든 사용자의 관리자 권한이 제거됩니다.
+>**[!UICONTROL AEM 관리자]** 또는 **[!UICONTROL AEM 사용자]**&#x200B;라는 기본 제품 프로필을 편집하거나 삭제하지 마십시오. **[!UICONTROL AEM 관리자]**&#x200B;의 이름을 변경하면 할당된 모든 사용자의 관리자 권한이 제거됩니다.
 
 ### 할당 확인 {#verify-assignment}
 
@@ -119,7 +151,7 @@ ht-degree: 100%
 | 상태 | 의미 |
 | --- | --- |
 | **신규** | 소스가 방금 생성되었으며, 자동 확보는 아직 시작되지 않았습니다. 이 상태는 잠시만 유지됩니다. |
-| **색인화** | 획득이 진행 중이며, 콘텐츠가 크롤 및 색인화되고 있습니다. |
+| **색인화** | 확보가 진행 중이며, 콘텐츠가 크롤 및 색인화되고 있습니다. |
 | **사용 가능** | 색인화가 완료되었습니다. 소스에서 검색 쿼리를 수행할 준비가 되었습니다. |
 
 ![색인화 상태를 보여주는 콘텐츠 소스 목록](../assets/content-ai-onboarding-step-9.png)
@@ -162,7 +194,7 @@ ht-degree: 100%
 
    >[!WARNING]
    >
-   >소스 삭제는 되돌릴 수 없습니다. 해당 소스에 대해 색인화된 모든 콘텐츠가 제거되어 더 이상 검색 쿼리를 수행할 수 없습니다.
+   >소스 삭제는 되돌릴 수 없습니다. 해당 소스에 대해 색인화된 모든 콘텐츠가 제거되어 더 이상 검색 쿼리에 응답할 수 없습니다.
 
 삭제 후에는 소스가 더 이상 목록에 표시되지 않습니다.
 
@@ -175,4 +207,4 @@ ht-degree: 100%
 
 * **소스가 장기간 [!UICONTROL 색인화] 상태입니다.** (...) 메뉴에서 획득을 다시 시도하십시오. 두 번째 실행 후에도 상태가 나아지지 않으면 **[!UICONTROL 웹 사이트 주소]**&#x200B;에 공개적으로 연결할 수 있는지, **[!UICONTROL URL 제외]** 패턴이 모든 페이지를 필터링하지 않는지 확인하십시오.
 * **실행 후에는 소스가 [!UICONTROL 신규]로 다시 이동합니다.** 웹 크롤러가 구성된 루트 URL에서 페이지를 가져오지 못했습니다. URL이 `200 OK`로 응답하고 사이트가 자동화된 요청을 차단하지 않는지 확인하십시오.
-* **[!UICONTROL 검색]이 [!UICONTROL 사용 가능]한 소스에 대한 결과를 반환하지 않습니다.** 색인화에 성공했지만 쿼리와 일치하는 콘텐츠가 없습니다. 더 광범위한 쿼리를 시도하거나 기대하는 크롤 URL이 포함되어 있는지 확인하십시오.
+* **[!UICONTROL 검색]이 [!UICONTROL 사용 가능]한 소스에 대한 결과를 반환하지 않습니다.** 색인화에 성공했지만 쿼리와 일치하는 콘텐츠가 없습니다. 더 광범위한 쿼리를 시도하거나 크롤링된 URL에 예상한 페이지가 포함되어 있는지 확인하십시오.
