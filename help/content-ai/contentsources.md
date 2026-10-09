@@ -63,10 +63,10 @@ ht-degree: 76%
 
 자세한 내용은 다음 문서를 참조하십시오.
 
-* [Cloud Manager 제품 프로필에 팀원 할당](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
+* [Cloud Manager 제품 프로필에 팀원 할당](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
 * [Cloud Manager 액세스](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager)
-* [AEM as a Cloud Service 팀 및 제품 프로필](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
-* [사용자 및 역할 추가](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
+* [AEM as a Cloud Service 팀 및 제품 프로필](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
+* [사용자 및 역할 추가](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
 
 ## AEM 제품 프로필에 사용자 할당 {#assign-product-profile}
 
