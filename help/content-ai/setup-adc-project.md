@@ -6,17 +6,26 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM 콘텐츠 AI, Adobe Developer Console, 인증, 서버 간, API 키, 액세스 토큰
-source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
-workflow-type: ht
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
+workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 100%
-
 ---
-
 
 # Adobe Developer Console 프로젝트 설정 {#configure-adc-project}
 
-AEM 콘텐츠 AI 서비스 API를 호출하려면 Adobe Developer Console(ADC) 프로젝트에서 발급한 자격 증명이 필요합니다. 이 페이지에서는 프로젝트 생성, 인증 방법 선택 및 모든 API 요청에 포함된 자격 증명 생성에 대해 안내합니다.
+AEM 콘텐츠 AI 서비스 API를 호출하려면 Adobe Developer Console(ADC) 프로젝트에서 발급한 자격 증명이 필요합니다. 이 페이지에서는 프로젝트 생성, 인증 방법 선택 및 모든 API 요청에 포함할 자격 증명 생성에 대해 안내합니다.
 
 시작하려면 [Adobe Developer Console](https://developer.adobe.com/console/)로 이동하십시오.
 
@@ -106,7 +115,7 @@ AEM 콘텐츠 AI 서비스는 두 가지 인증 방법을 지원합니다. 통�
 
    ![연결된 자격 증명에서 API 키 복사](../assets/onboarding-api-key-04.png)
 
-1. 모든 API 요청에 키 포함:
+1. 모든 API 요청에 키를 포함합니다:
 
    ```http
    x-api-key: YOUR_API_KEY
