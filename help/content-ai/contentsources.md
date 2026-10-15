@@ -20,7 +20,7 @@ level_v2:
 source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
 workflow-type: tm+mt
 source-wordcount: '1671'
-ht-degree: 76%
+ht-degree: 100%
 ---
 
 # 콘텐츠 AI 소스 설정 및 관리
@@ -32,36 +32,36 @@ ht-degree: 76%
 시작하기 전에 다음 조건이 충족되는지 확인하십시오.
 
 * 하나 이상의 AEM as a Cloud Service 환경이 있는 활성 Cloud Manager 프로그램을 갖고 있습니다.
-* Cloud Manager 제품 프로필이 있으며 Cloud Manager에 로그인할 수 있습니다. 아래 [Cloud Manager 액세스 권한 받기](#cloud-manager-access)를 참조하세요.
+* Cloud Manager 제품 프로필이 있으며 Cloud Manager에 로그인할 수 있습니다. 아래의 [Cloud Manager 액세스 권한 받기](#cloud-manager-access)를 참조하세요.
 * 사용자가 대상 환경의 **AEM 사용자** 제품 프로필에 할당되어 콘텐츠 소스를 볼 수 있습니다.
 * 사용자가 대상 환경의 **AEM Administrators** 제품 프로필에 할당되어 콘텐츠 소스를 만들고 편집할 수 있습니다. Cloud Manager에 대한 액세스만으로는 충분하지 않습니다. 아래 [AEM 제품 프로필에 사용자 할당](#assign-product-profile)을 참조하십시오.
 * **Adobe Admin Console**&#x200B;에서 환경 제품 프로필이 프로비저닝되었습니다.
 
-## Cloud Manager 액세스 권한 얻기 {#cloud-manager-access}
+## Cloud Manager 액세스 권한 받기 {#cloud-manager-access}
 
-**[!UICONTROL 콘텐츠 AI 구성]** 탭을 열려면 Cloud Manager UI에 액세스해야 합니다. 조직의 [!DNL Adobe Admin Console] 관리자(시스템 관리자 또는 제품 관리자)가 이 액세스 권한을 부여합니다.
+**[!UICONTROL 콘텐츠 AI 구성]** 탭을 열려면 Cloud Manager UI에 대한 액세스 권한이 필요합니다. 조직의 [!DNL Adobe Admin Console] 관리자(시스템 관리자 또는 제품 관리자)가 이 액세스 권한을 부여합니다.
 
-1. [[!DNL Adobe Admin Console]](https://adminconsole.adobe.com/) 관리자에게 문의하십시오. 아직 조직의 멤버가 아닌 경우 관리자에게 Adobe ID 또는 이메일 주소를 추가하도록 요청하십시오.
-1. 조직의 AEM as a Cloud Service 프로그램에 대한 Cloud Manager 제품 프로필을 할당하도록 관리자에게 요청합니다.
+1. [[!DNL Adobe Admin Console]](https://adminconsole.adobe.com/) 관리자에게 문의하세요. 아직 조직의 구성원이 아니라면 관리자에게 Adobe ID 또는 이메일 주소를 추가해 달라고 요청하세요.
+1. 관리자에게 조직의 AEM as a Cloud Service 프로그램에 대한 Cloud Manager 제품 프로필을 할당해 달라고 요청하세요.
 
-   | 제품 프로필 | 허용 사항 |
+   | 제품 프로필 | 허용되는 작업 |
    | --- | --- |
-   | **[!UICONTROL 비즈니스 소유자]** | 프로그램을 관리합니다. **[!UICONTROL 액세스 관리]**&#x200B;를 포함한 광범위한 Cloud Manager 권한이 있습니다. |
-   | **[!UICONTROL 배포 관리자]** | 환경, 배포 및 파이프라인 관리 |
-   | **[!UICONTROL 프로그램 관리자]** | 팀 설정 및 프로그램 감독을 관리합니다. |
-   | **[!UICONTROL 개발자]** | 코드 및 Git과 함께 작동합니다. 은(는) Cloud Manager 권한이 제한되어 있습니다. |
+   | **[!UICONTROL 비즈니스 소유자]** | 프로그램을 관리합니다. **[!UICONTROL 액세스 관리]**&#x200B;를 포함하여 Cloud Manager에서 광범위한 권한을 보유합니다. |
+   | **[!UICONTROL 배포 관리자]** | 환경, 배포 및 파이프라인을 관리합니다. |
+   | **[!UICONTROL 프로그램 관리자]** | 팀 구성과 프로그램 감독을 담당합니다. |
+   | **[!UICONTROL 개발자]** | 코드 및 Git으로 작업합니다. Cloud Manager에서 제한된 권한을 보유합니다. |
 
-1. Cloud Manager을 열려면 [Cloud Manager](https://my.cloudmanager.adobe.com/)에 로그인하거나 [[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**(으)로 이동하세요. Adobe ID이 둘 이상의 조직에 속해 있는 경우 올바른 조직을 선택하십시오.
+1. Cloud Manager를 열려면 [Cloud Manager](https://my.cloudmanager.adobe.com/)에 로그인하거나 [[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**&#x200B;로 이동하세요. Adobe ID가 둘 이상의 조직에 속해 있다면 올바른 조직을 선택하세요.
 
 >[!NOTE]
 >
->Cloud Manager 제품 프로필에서는 콘텐츠 소스에 대한 액세스 권한을 제공하지 않습니다. 환경에 대한 **[!UICONTROL AEM 사용자]** 또는 **[!UICONTROL AEM 관리자]** 제품 프로필이 필요합니다. [AEM 제품 프로필에 사용자 할당](#assign-product-profile)을 참조하세요. 기본 Cloud Manager 사용자 역할만 있는 사용자는 환경을 열 수 있지만 프로그램 수준 액세스 권한은 받지 않습니다.
+>Cloud Manager 제품 프로필은 콘텐츠 소스에 대한 액세스 권한을 부여하지 않습니다. 해당 환경에 대한 **[!UICONTROL AEM 사용자]** 또는 **[!UICONTROL AEM 관리자]** 제품 프로필도 필요합니다. [AEM 제품 프로필에 사용자 할당](#assign-product-profile)을 참조하세요. 기본 Cloud Manager 사용자 역할만 있는 사용자는 환경을 열 수 있지만 프로그램 수준의 액세스 권한은 갖지 못합니다.
 
-로그인했지만 프로그램 또는 **[!UICONTROL 콘텐츠 AI 구성]** 탭이 표시되지 않는 경우 관리자에게 할당된 제품 프로필을 확인하도록 요청하십시오. 또한 로그인 시 올바른 조직을 선택했는지 확인합니다. AEM Managed Services은 AEM as a Cloud Service과 다른 [!DNL Admin Console] 제품 컨텍스트 및 설정을 사용합니다.
+로그인했는데 프로그램 또는 **[!UICONTROL 콘텐츠 AI 구성]** 탭이 표시되지 않으면 관리자에게 할당된 제품 프로필을 확인해 달라고 요청하세요. 로그인할 때 올바른 조직을 선택했는지도 확인하세요. AEM Managed Services는 AEM as a Cloud Service와 [!DNL Admin Console] 제품 컨텍스트 및 설정이 다릅니다.
 
-초기 온보딩 중에 프로그램을 만들려면 먼저 시스템 관리자가 **[!UICONTROL 비즈니스 소유자]** 프로필을 가지고 있어야 하며 Cloud Manager에 로그인해야 합니다.
+초기 온보딩 중 프로그램을 만들려면 시스템 관리자가 먼저 **[!UICONTROL 비즈니스 소유자]** 프로필을 보유하고 Cloud Manager에 로그인해야 합니다.
 
-자세한 내용은 다음 문서를 참조하십시오.
+자세한 내용은 다음 문서를 참조하세요.
 
 * [Cloud Manager 제품 프로필에 팀원 할당](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
 * [Cloud Manager 액세스](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager)
@@ -82,9 +82,9 @@ ht-degree: 76%
 이러한 프로필을 할당하려면 [!UICONTROL 비즈니스 소유자] Cloud Manager 제품 프로필이 있는 시스템 관리자여야 합니다. 사용자 이름과 이메일 주소를 준비합니다.
 
 1. [Cloud Manager](https://my.cloudmanager.adobe.com/)에서 프로그램으로 이동하여 대상 환경에 대해 **[!UICONTROL 액세스 관리]**&#x200B;를 선택합니다. 새 탭이 해당 환경에 맞는 [!DNL Adobe Admin Console]을(를) 엽니다.
-1. **작성자** 및 **게시** 계층(예: `AEM Administrators - author - Program 12345 - Environment 67890` 및 `AEM Administrators - publish - Program 12345 - Environment 67890`) 모두에 대해 **[!UICONTROL AEM 사용자]** 또는 **[!UICONTROL AEM 관리자]** 제품 프로필을 선택하십시오.
-   * **[!UICONTROL AEM 사용자]** - 읽기 전용 작업입니다.
-   * **[!UICONTROL AEM 관리자]** - 콘텐츠 원본 만들기, 편집 또는 제거, 획득 트리거와 같은 쓰기 작업.
+1. **작성자** 및 **게시** 계층 모두에 대해 **[!UICONTROL AEM 사용자]** 또는 **[!UICONTROL AEM 관리자]** 제품 프로필을 선택하세요. 예를 들어 `AEM Administrators - author - Program 12345 - Environment 67890` 및 `AEM Administrators - publish - Program 12345 - Environment 67890`이(가) 있습니다.
+   * **[!UICONTROL AEM 사용자]** - 읽기 전용 작업을 수행합니다.
+   * **[!UICONTROL AEM 관리자]** - 콘텐츠 소스 생성, 편집, 제거 및 수집 트리거와 같은 쓰기 작업을 수행합니다.
 1. **[!UICONTROL 사용자 추가를 선택합니다]**.
 1. 사용자 이름과 이메일 주소를 입력한 다음 변경 사항을 저장합니다. 사용자가 제품 프로필에 추가됩니다.
 
