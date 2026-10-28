@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '714'
-ht-degree: 100%
+ht-degree: 98%
 ---
 
 # Adobe Developer Console 프로젝트 설정 {#configure-adc-project}
@@ -126,4 +126,4 @@ AEM 콘텐츠 AI 서비스는 두 가지 인증 방법을 지원합니다. 통�
 ## 다음 단계 {#next-steps}
 
 * [콘텐츠 소스 제어](contentsources.md) - Cloud Manager에서 콘텐츠 소스를 구성하고 획득을 트리거합니다.
-* [콘텐츠 AI API 참조](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) - 액세스 토큰 또는 API 키를 사용하여 색인화된 콘텐츠를 쿼리합니다.
+* [콘텐츠 AI API 참조](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/) - 액세스 토큰 또는 API 키를 사용하여 색인화된 콘텐츠를 쿼리합니다.

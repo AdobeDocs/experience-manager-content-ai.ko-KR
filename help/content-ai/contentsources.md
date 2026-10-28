@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '1671'
-ht-degree: 100%
+ht-degree: 99%
 ---
 
 # 콘텐츠 AI 소스 설정 및 관리
@@ -212,7 +212,7 @@ ht-degree: 100%
 ## 다음 단계 {#next-steps}
 
 * [Adobe Developer Console 프로젝트 설정](setup-adc-project.md) - API를 호출하는 데 필요한 ADC 프로젝트와 자격 증명을 만듭니다.
-* [콘텐츠 AI API 참조](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) - 시맨틱, 전체 텍스트 또는 하이브리드 검색 엔드포인트를 사용하여 색인화된 콘텐츠를 쿼리합니다.
+* [콘텐츠 AI API 참조](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/) - 시맨틱, 전체 텍스트 또는 하이브리드 검색 엔드포인트를 사용하여 색인화된 콘텐츠를 쿼리합니다.
 
 ## 문제 해결 {#troubleshooting}
 
